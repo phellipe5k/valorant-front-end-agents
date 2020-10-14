@@ -1,0 +1,181 @@
+@font-face {font-family: "Druk Wide Bold";
+  src: url("../fonts/2206d6cc490084998d531e8c1b2cbb4a.eot"); /* IE9*/
+  src: url("../fonts/2206d6cc490084998d531e8c1b2cbb4a.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/2206d6cc490084998d531e8c1b2cbb4a.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/2206d6cc490084998d531e8c1b2cbb4a.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/2206d6cc490084998d531e8c1b2cbb4a.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/2206d6cc490084998d531e8c1b2cbb4a.svg#Druk Wide Bold") format("svg"); /* iOS 4.1- */
+}
+
+body {
+  font-family: 'Druk Wide Bold';
+  
+}
+
+.agents-section {
+  background-color: #FF4656;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.characters-row {
+  width: 80%;
+}
+.agents-section-text-wrap {
+  width: 20%;
+}
+.agents-section-text-wrap h1 {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 64pt;
+  position: relative;
+  top: 100px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  transform: rotate(90deg);
+}
+
+.background-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.1;
+  z-index: 0;
+}
+.agent-card {
+  width: 300px;
+  margin-right: 110px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.character {
+  background-color: #1F2326;
+  width: 100%;
+  height: 585px;
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position:  -30px 20px;
+  position: relative;
+  transition: 650ms;
+  border-radius: 29px 0 0 0;
+}
+
+.character h2 {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 34pt;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 115px;
+  right: 148px;
+  width: 100%;
+}
+
+.character h5 {
+  color: #FF4656;
+  font-size: 12pt;
+  letter-spacing: 1px;
+  position: absolute;
+  transform: rotate(90deg);
+  top: 140px;
+  right: 110px;
+  width: 100%;
+}
+
+.abilities {
+  background-color: #1F2326;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  position: relative;
+  left: 20px;
+  bottom: 50px;
+}
+.abilities div {
+  display: inline-block;
+  border-radius: 60%;
+}
+
+.abilities svg{
+  width: 57px;
+  height: 57px;
+  transition: 350ms;
+}
+
+.agent-card:hover .character {
+  transition: 650ms;
+  background-position:  -100px 20px;
+  background-color: rgb(240, 229, 229);
+}
+.agent-card:hover h2 {
+  -webkit-text-stroke-color: #1F2326;
+}
+.agent-card:hover .abilities svg{
+  fill: #1F2326;
+}
+
+.agent-card .abilities div:hover svg {
+  fill: #FF4656;
+  transform: scale(1.2);
+  transition: 350ms;
+}
+
+.loadingScreen {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #1F2326 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  top: -19px;
+  left: 0;
+  color: #FF4656;
+}
+
+.loadingScreen img {
+  width: 200px;
+  height: 200px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+.skye {
+  transition: 350ms;
+  transform: scale(0.8);
+}
+
+
+
+.agent-card:hover .abilities svg{
+  fill: #1F2326;
+}
+
+.agent-card .abilities div:hover svg {
+  fill: #FF4656;
+  transform: scale(1.2);
+  transition: 350ms;
+}
+
+.agent-card .abilities div:hover .skye:hover{
+  transform: scale(1);
+  transition: 350ms;
+}

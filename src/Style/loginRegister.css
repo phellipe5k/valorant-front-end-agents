@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.forms {
+  width: 100%;
+  height: 100vh;
+  font-family: Montserrat;
+  display: flex;
+}
+.login-area {
+  position: relative;
+}
+.forms input {
+  width: 78%;
+  height: 55px;
+  margin: 10px 0;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  color: black;
+  font-size: 12pt;
+  padding-left: 10px;
+  outline: none;
+}
+
+.forms input:focus {
+  background-color: rgb(145, 145, 145);
+  color: white;
+}
+
+
+.forms input::placeholder {
+  color: black;
+  transition: 650ms;
+}
+.login-area form {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  margin-top: 50px;
+  align-items: center;
+  max-height: 500px;
+}
+
+.forms h3 {
+  font-size: 20pt;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 50px;
+}
+.forms button {
+  background-color: transparent;
+  border: none;
+}
+.login-icon {
+  font-size: 100pt;
+  color: white;
+  transition: 450ms;
+  cursor: pointer;
+  margin: 50px 0 0 0;
+}
+
+.forms a {
+  text-decoration: none;
+  color: rgb(192, 192, 192);
+  align-self: flex-end;
+  margin-right: 5%;
+  margin-top: 10px;
+  transition: 650ms;
+}
+
+.login-icon:hover {
+  color:#1F2326;
+  transition: 450ms;
+}
+
+.forms a:hover {
+  color: #1F2326;
+  transition: 650ms;
+}
+
+.forms a:hover .create-icon {
+  animation: rotate 350ms linear forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(90deg);
+
+  }
+}
+
+
+ video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+}
+.filter-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 116%;
+  z-index: -1;
+  opacity: 0.85;
+  background-color: #FF4656;
+}
+.logo-valorant {
+  width: 60%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.svg-valorant {
+  width: 80%;
+}
+
+
+.jogue-agora {
+
+}
+.jogue-agora a {
+  background-color: white;
+  display: inline-block;
+  text-align: center;
+  width: 320px;
+  padding: 20px 15px; 
+  color: black;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.jogue-agora a::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 370px;
+  height: 80px;
+  border: 1px solid black;
+  clip: rect(0px,375px,35px,0px);
+  transition: 650ms;
+}
+
+.jogue-agora a::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 370px;
+  height: 80px;
+  border: 1px solid white;
+  clip: rect(50px, 375px, 375px,0px);
+  transition: 350ms;
+}
+
+.jogue-agora a:hover {
+  color: white;
+  background-color: #1F2326;
+  transition: 350ms;
+}
+
+.jogue-agora a:hover::before {
+  border: 1px solid black;
+  transition: 350ms;
+  clip: rect(50px, 375px, 375px,0px);
+}
+
+.jogue-agora a:hover::after {
+  border: 1px solid white;
+  transition: 350ms;
+  clip: rect(0px,375px,35px,0px);
+}
+
+.register-area form {  
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  margin-top: 50px;
+  align-items: center;
+  max-height: 500px;
+  justify-content: center;
+}
+.register-area {
+  display: flex;
+  justify-content: center;
+}
+.register-area button {
+  background-color: white;
+  width: 60%;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 450ms;
+}
+.register-area button:hover {
+  background-color: black;
+  transition: 450ms;
+  color: white;
+}
+
+.register-area form h1 {
+  color: #1F2326;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 24pt;
+}
+
+button{
+  outline: none;
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.header {
+  background-color: #1F2326;
+  padding: 1%;
+  display: flex;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.header a {
+  text-decoration: none;
+  color: white;
+}
+.line-separate {
+  width: 1px;
+  height: 60%;
+  align-self: center;
+  background-color: white;
+}
+
+.logos {
+  width: 12%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.riot-games {
+  width: 75px;
+}
+
+.valorant {
+  width: 40px;
+}
+
+.navegation {
+  align-self: center;
+  width: 54%;
+  text-align: left;
+}
+.navegation a {
+  color: white;
+  margin-right: 30px;
+  align-self: center;
+  text-decoration: none;
+}
+
+.login {
+  display: flex;
+  font-size: 10pt;
+  color: white;
+  width: 10%;
+  justify-content: space-around;
+}
+
+.selector img{
+  margin-left: 5px;
+  position: relative;
+  top: -1px;
+}
+
+.logg:hover {
+  transition: 450ms;
+  color: #FF4656;
+}
+
+.register:hover {
+  color: #FF4656;
+  transition: 450ms;
+}
+
+
+.log-in {
+  display: flex;
+  width: 20%;
+  height: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.profile-name {
+  display: flex;
+  width: 60%;
+  height: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(77, 72, 72, 0.753);
+  border-radius: 60px;
+}
+.log-in button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.profile-name h5, .log-in h5 {
+  font-size: 12pt;
+  color: white;
+}
+.profile-name img {
+  display: inline-block;
+  border-radius: 50%;
+  height: 60%;
+}
