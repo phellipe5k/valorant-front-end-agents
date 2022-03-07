@@ -4,44 +4,42 @@ import { Query } from 'react-apollo';
 import Character from './Character';
 import Logo from '../valorant-logo.png';
 import { motion } from 'framer-motion';
-
-const GET_CURRENT_USER = gql`
-{
-  characters {
-    id
-    name
-    country
-    characterImage {
-      url
-    }
-    ability {
-      signatureAbilityLogo 
-      UltimateLogo 
-      Ability1Logo 
-      Ability2Logo 
-    }
-  }
-} 
-`;
+import data_mocked from '../mock/';
  
 class Characters extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      chars: [],
+      loading: true,
 
+    }
+  }
+
+  fetchApi = async () => {
+    // const pending = await fetch(`https://valorant-project-back-end.herokuapp.com/characters`);
+  
+    console.log(this.state.chars);
+  }
+  componentDidMount(){
+    // this.fetchApi();
+    this.setState({chars: data_mocked, loading: false});
+  }
   render() {
     return (
-      <Query query={GET_CURRENT_USER}>
-        {({ data, loading }) => {
-          if (loading || !data.characters) return <div className="loadingScreen"><img src={Logo}/>Loading...</div>
-          const agents = data.characters;
-          return (
-            <motion.div animate={{transition: {
+      <div>
+       {
+          (this.state.loading) 
+          ? <h1>loading...</h1>
+          : (
+            <motion.div className='agents-div-width' animate={{transition: {
               staggerChildren: 0.8
-            }}} style={{display: 'flex', flexWrap: 'wrap'}} className="characters-row">
-              {agents.map(data =>  <Character data={data} />)}
+            }}} >
+              {this.state.chars.map(data =>  <Character data={data} />)}
             </motion.div>
           )
-        }
-        }
-      </Query>
+       }
+      </div>
     )
   }
 };

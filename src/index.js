@@ -3,28 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter } from 'react-router-dom';
-
-const CharactersHttp = new HttpLink({
-  uri: 'http://localhost:1337/graphql'
-})
-
-const cache = new InMemoryCache();
-
-const client = new ApolloClient({
-  link: CharactersHttp,
-  cache,
-});
 
 ReactDOM.render(
   <BrowserRouter>
-    <ApolloProvider client={client}>
       <App />
-    </ApolloProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

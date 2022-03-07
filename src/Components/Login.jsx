@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import '../Style/loginRegister.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignInAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FaSignInAlt, FaPlus } from 'react-icons/fa';
 import wallpaperVideo from '../videos/video.mp4';
 import Valorant from '../logo-valorant.svg';
 import userdata from '../api/userdata';
@@ -73,9 +72,9 @@ class Login extends React.Component {
           <input type="text" onChange={this.handleRegister} value={username} placeholder="Username" name="username" className="username" />
           <input type="password" onChange={this.handleRegister} name="password" value={password} placeholder="Password" />
           <button onClick={this.handleButton} type="button">
-            <FontAwesomeIcon icon={faSignInAlt} className="login-icon"></FontAwesomeIcon>
+            <FaSignInAlt className="login-icon" />
           </button>
-          <Link to="/register"> <FontAwesomeIcon icon={faPlus} className="create-icon"></FontAwesomeIcon> CRIAR CONTA</Link>
+          <Link to="/register"> <FaPlus className="create-icon"/> CRIAR CONTA</Link>
         </form>
         
       </section>  
